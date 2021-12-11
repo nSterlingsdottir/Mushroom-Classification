@@ -41,6 +41,7 @@
 
 <p align="center">
 	<img src="/Images/ConfusionMatrix.png" alt="Confusion Matrices"/>
+	Figure 1
 	</p>
 
 &nbsp; &nbsp; &nbsp;Precision and recall are both derived from the values obtained from the confusion matrix.  Precision is the ability of a classification model to identify only the relevant data points. Recall is the ability to find all relevant instances in a dataset. Since the dataset is an imbalanced dataset, a sklearn classification report was run for each model which provided the precision and recall for each label.  In general, the precision and recall for each model are similar in values except for Adaboost with the lowest values. For precision Adaboost predicted the edible data better than the inedible data and for recall Adaboost predicted the inedible data better than the edible data. Overall, Random Forest had the best precision and recall scores. 
