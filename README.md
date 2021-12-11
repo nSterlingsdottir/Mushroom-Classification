@@ -1,4 +1,4 @@
-# Mushroom-Classification
+# Mushroom Classification as Edible or Inedible
 ## Abstract
 
 &nbsp; &nbsp; &nbsp;An analysis was performed on the UCI and Phillips University mushroom dataset to classify edible and inedible mushrooms.  The data from the two sources were combined together, made tidy and then augmented with dummy variables to ensure all metrics were accounted for using integer inputs.  The classifications are based on physical features of the mushrooms such as its cap, gills, stalk, rings, and etc. Each classification model developed was measured by its accuracy, confusion matrix, recall, precision, f-score, kappa score, and AUC.  After training, KNN, SVM, Adaboost, decision tree, and random forest, they were all above 90% accuracy, but the random forest classifier stood out as the best with an astounding 99% classifying accuracy in our testing, with a 25% training percentage. 
