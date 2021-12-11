@@ -45,3 +45,41 @@
 	</p>
 
 &nbsp; &nbsp; &nbsp;Precision and recall are both derived from the values obtained from the confusion matrix.  Precision is the ability of a classification model to identify only the relevant data points. Recall is the ability to find all relevant instances in a dataset. Since the dataset is an imbalanced dataset, a sklearn classification report was run for each model which provided the precision and recall for each label.  In general, the precision and recall for each model are similar in values except for Adaboost with the lowest values. For precision Adaboost predicted the edible data better than the inedible data and for recall Adaboost predicted the inedible data better than the edible data. Overall, Random Forest had the best precision and recall scores. 
+
+
+<p align="center">
+	<img src="/Images/Precision.png" alt="Precision"/>
+	Figure 2
+	</p>
+	
+<p align="center">
+	<img src="/Images/Recall.png" alt="Recall"/>
+	Figure 3
+	</p>
+	
+&nbsp; &nbsp; &nbsp;F-score is derived from the precision and recall scores. It’s the harmonic mean of precision and recall. The higher the score, the better the classifier. Since Random Forest performed the best and Adaboost performed the worst, the F-score reflects that performance with Adaboost having the lowest scores and Random Forest and SVM with the best scores. 
+
+
+<p align="center">
+	<img src="/Images/Fscore.png" alt="F-Score"/>
+	Figure 4
+	</p>
+	
+&nbsp; &nbsp; &nbsp;Accuracy is the number of correct predictions divided by the total predictions. Figure 5 shows all the accuracy scores for each model. According to the figure, the Random Forest model has the highest accuracy compared to the other models. 
+
+
+<p align="center">
+	<img src="/Images/ModelAccuracyScores.png" alt="Model Accuracies"/>
+	Figure 5
+	</p>
+	
+&nbsp; &nbsp; &nbsp;As mentioned previously, the mushroom dataset is imbalanced. When a dataset is imbalanced accuracy is not enough to determine if the model is performing well. Cohen’s kappa is a measure of interreliablity between two raters. It takes into consideration imbalanced datasets by ignoring predictions that are possibly determined by random (Widmann, 2021). The model with the highest Kappa score is again Random Forest. 
+
+
+<p align="center">
+	<img src="/Images/ModelKappaScore.png" alt="Kappa Scores"/>
+	Figure 6
+	</p>
+
+
+&nbsp; &nbsp; &nbsp;Finally, the last metric that was used on each model was ROC curves and its AUC scores. ROC curves are plotted using precision and recall; it is a visualization of precision and recall. AUC sums up the ROC curve in one number and generally helps determine how well the model is distinguishing between the classes (Bhandari , 2020). Random Forest proved to have the best AUC with a perfect 1.00
