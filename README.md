@@ -83,3 +83,25 @@
 
 
 &nbsp; &nbsp; &nbsp;Finally, the last metric that was used on each model was ROC curves and its AUC scores. ROC curves are plotted using precision and recall; it is a visualization of precision and recall. AUC sums up the ROC curve in one number and generally helps determine how well the model is distinguishing between the classes (Bhandari , 2020). Random Forest proved to have the best AUC with a perfect 1.00
+
+
+## Results
+
+&nbsp; &nbsp; &nbsp;Overall the model with the best results is Random Forest. It had the highest values for each metric that was run on it compared to the rest of the models with a kappa score of .987 and an accuracy score of .994. Although Random Forest was the best model, the other models that were developed had close values to Random Forest with SVM coming close to the results that Random Forest had. The worst model was Adaboost which had lower values than the rest with a kappa score of .916 and accuracy score of .958. It is expected for Random Forest to yield the highest accuracy due to it being an ensemble method where it uses a major-vote to determine the best decision tree based on accuracy. 
+
+## Discussion
+
+&nbsp; &nbsp; &nbsp;When comparing models, using a boxplot required a cross fold validation in order to accurately compare the models to one another. The cross fold validation method is where the average of the accuracies of a model is taken over a certain amount of iterations to gauge how accurate the model actually is. After running all 6 models through the 10-cross fold validation, the accuracy values were lower compared to the fine tuned models. Random forest had the highest accuracy compared to all other models whereas Decision tree performed the best when using the 10-fold cross validation method. A possible reason for Random Forest to not perform well is that it is an ensemble method that uses a majority-vote to determine the best and most accurate decision tree. Because of that Random Forest will have a lower accuracy due to it taking an average of all decision trees, including trees that are inaccurate. 
+
+<p align="center">
+	<img src="/TenFoldValidation.png" alt="Algorithm Comparison"/>
+	Figure 7
+	</p>
+	
+&nbsp; &nbsp; &nbsp;Due to this dataset containing only two species of mushrooms, adding more contrasting species would allow more classifications of mushrooms and add additional training data. With only 2 species, it is easier for the models to be fine tuned for accuracy. The more data a model, the more precise and accurate the model can become based on the number of attributes, therefore, working with other attributes such as mushroom cap
+&nbsp; &nbsp; &nbsp;As seen within the correlation matrix, there were four main attributes that contributed to deducing whether mushrooms were edible or inedible; gill color, veil color, gill attachment and veil type. It is believed these attributes contributed to the solution of edibility is that this dataset mainly contained gilled mushrooms which validates why the four previously mentioned attributes have the strongest correlations. Attributes that would be used in the future work would be cap shape and habit since mushrooms come in all unique shapes and locations which would better determine if they are or aren’t edible. 
+&nbsp; &nbsp; &nbsp;Possible further improvements that could be made would be to include photos of certain mushroom species as entries and utilize Neural Networks to improve the classification with more qualitative data.  Using deep learning would increase the reliability of model in a real world application which is how other AI apps are used for when classifying flowers or types of plants.
+
+## Conclusion
+
+Our model did a fantastic job at accurately predicting which mushroom would be poisonous and which would not.  At a 99% accuracy rate our model error could not even be considered statistically significant and could be used with expert judgement as a valuable tool in identifying edible mushrooms.  Utilizing Neural networks moving forward as mentioned in our discussion would be ideal as it could possibly be turned into an app that could identify mushrooms in the wild with a phone camera.  In this project we were able to combine 2 data sets from different time periods into a tidy dataframe, and pick out the metrics that most influenced their identification.  After the final data set was codified, we then trained 6 different models to find which one would be the most accurate to the testing data.  Each of the ROC curves and confusion matrix’s were compared, and the Random Forest model ended up being the most accurate, but nearly every model was above 90% accuracy.  
